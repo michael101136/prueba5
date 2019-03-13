@@ -3,7 +3,7 @@
                 <div class="container">
                     <nav class="c-top-menu">
                         <ul class="c-links c-theme-ul">
-                            <li>
+                            <!-- <li>
                                 <a href="#" class="c-font-uppercase c-font-bold">Help</a>
                             </li>
                             <li>
@@ -12,9 +12,9 @@
                             <li class="c-divider"></li>
                             <li>
                                 <a href="#" class="c-font-uppercase c-font-bold c-font-dark">Support</a>
-                            </li>
+                            </li> -->
                             <li>
-                                <a href="javascript:;" data-toggle="modal" data-target="#login-form" class="btn c-theme-btn c-btn-square c-btn-uppercase c-btn-bold">Sign In</a>
+                                <a href="javascript:;" data-toggle="modal" data-target="#login-form" class="btn c-theme-btn c-btn-square c-btn-uppercase c-btn-bold">Entrar</a>
                             </li>
                         </ul>
                         <ul class="c-ext hide c-theme-ul">
@@ -274,7 +274,7 @@
                                     </a>
                                 </li>
                                 <li class="c-menu-type-classic">
-                                    <a href="javascript:;" class="c-link dropdown-toggle">Nosotros
+                                    <a href="javascript:;" class="c-link dropdown-toggle">Clientes
                                         <span class="c-arrow c-toggler"></span>
                                     </a>
                                 </li>

@@ -324,13 +324,13 @@
                             <div class="c-content-tab-4 c-opt-3" role="tabpanel">
                                 <ul class="nav nav-justified" role="tablist">
                                     <li role="presentation" class="active">
-                                        <a href="#tab-31" role="tab" data-toggle="tab" class="c-font-16">POPULAR</a>
+                                        <a href="#tab-31" role="tab" data-toggle="tab" class="c-font-16">MISIÓN</a>
                                     </li>
                                     <li role="presentation">
-                                        <a href="#tab-32" role="tab" data-toggle="tab" class="c-font-16">COMMENTS</a>
+                                        <a href="#tab-32" role="tab" data-toggle="tab" class="c-font-16">VISIÓN</a>
                                     </li>
                                     <li role="presentation">
-                                        <a href="#tab-33" role="tab" data-toggle="tab" class="c-font-16">RECENT</a>
+                                        <a href="#tab-33" role="tab" data-toggle="tab" class="c-font-16">VALORES</a>
                                     </li>
                                 </ul>
                                 <div class="tab-content">
