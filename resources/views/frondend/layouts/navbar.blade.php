@@ -219,10 +219,10 @@
                                     </a>
                                     <ul class="dropdown-menu c-pull-right">
                                                 <li>
-                                                    <a href="sidebar-menu-1.html">Quiénes somos</a>
+                                                    <a href="{{url('nosotros')}}">Quiénes somos</a>
                                                 </li>
                                                 <li>
-                                                    <a href="sidebar-menu-2.html">Equipo de trabajo</a>
+                                                    <a href="{{url('equipoTrabajo')}}">Equipo de trabajo</a>
                                                 </li>
                                                
                                             </ul>

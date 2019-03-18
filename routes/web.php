@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('frondend/inicio');
 });
+
+Route::resource('nosotros','NosotrosController');
+Route::get('equipoTrabajo','NosotrosController@viewEquipoTrabajo');
