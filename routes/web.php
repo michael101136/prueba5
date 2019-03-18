@@ -17,3 +17,7 @@ Route::get('/', function () {
 
 Route::resource('nosotros','NosotrosController');
 Route::get('equipoTrabajo','NosotrosController@viewEquipoTrabajo');
+
+Route::resource('servicios','ServiciosController');
+
+Route::resource('contacto','ContactoController');

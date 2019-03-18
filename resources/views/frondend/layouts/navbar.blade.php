@@ -233,7 +233,7 @@
                                     </a>
                                     <ul class="dropdown-menu c-menu-type-classic c-pull-left">
                                         <li class="dropdown-submenu">
-                                            <a href="javascript:;">Consultoria ambiental
+                                            <a href="{{url('servicios')}}">Consultoria ambiental
                                                 <span class="c-arrow c-toggler"></span>
                                             </a>
                                             <!-- <ul class="dropdown-menu c-pull-right">
@@ -279,7 +279,7 @@
                                     </a>
                                 </li>
                                 <li class="c-menu-type-classic">
-                                    <a href="javascript:;" class="c-link dropdown-toggle">Contacto
+                                    <a href="{{url('contacto')}}" class="c-link dropdown-toggle">Contacto
                                         <span class="c-arrow c-toggler"></span>
                                     </a>
                                 </li>

@@ -139,16 +139,16 @@
 
             <!-- END: CONTENT/PRODUCTS/PRODUCT-1 -->
             <!-- BEGIN: CONTENT/BARS/BAR-2 -->
-            <!-- <div class="c-content-box c-size-md c-bg-white">
+            <div class="c-content-box c-size-md c-bg-white">
                 <div class="container">
                     <div class="row">
-                        <div class="col-sm-6 wow animate fadeInLeft">
-                          
+                        <div class="col-sm-12 wow animate fadeInLeft">
+                            <!-- Begin: Title 1 component -->
                             <div class="c-content-title-1">
-                                <h3 class="c-font-uppercase c-font-bold">NOSOTROS</h3>
+                                <h3 class="c-font-uppercase c-font-bold">SERVICIOS</h3>
                                 <div class="c-line-left c-theme-bg"></div>
                             </div>
-                      
+                            <!-- End-->
                             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed elit diam nonummy nibh euismod tincidunt ut laoreet dolore magna aluam erat volutpat. Ut wisi enim ad minim veniam quis nostrud exerci et tation diam nisl ut aliquip
                                 ex ea commodo consequat euismod tincidunt ut laoreet dolore magna aluam. </p>
                             <ul class="c-content-list-1 c-theme  c-font-uppercase">
@@ -158,17 +158,17 @@
                             </ul>
                             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed elit diam nonummy nibh euismod tincidunt ut laoreet dolore.</p>
                         </div>
-                        <div class="col-sm-6 wow animate fadeInRight">
+                        <div class="col-sm-12 wow animate fadeInRight">
                             <div class="c-content-tab-4 c-opt-3" role="tabpanel">
                                 <ul class="nav nav-justified" role="tablist">
                                     <li role="presentation" class="active">
-                                        <a href="#tab-31" role="tab" data-toggle="tab" class="c-font-16">MISIÓN</a>
+                                        <a href="#tab-31" role="tab" data-toggle="tab" class="c-font-16">Vivienda</a>
                                     </li>
                                     <li role="presentation">
-                                        <a href="#tab-32" role="tab" data-toggle="tab" class="c-font-16">VISIÓN</a>
+                                        <a href="#tab-32" role="tab" data-toggle="tab" class="c-font-16">Agricultura</a>
                                     </li>
                                     <li role="presentation">
-                                        <a href="#tab-33" role="tab" data-toggle="tab" class="c-font-16">VALORES</a>
+                                        <a href="#tab-33" role="tab" data-toggle="tab" class="c-font-16">Transporte</a>
                                     </li>
                                 </ul>
                                 <div class="tab-content">
@@ -255,68 +255,8 @@
                         </div>
                     </div>
                 </div>
-            </div> -->
-
-
-            <!--inicio opcion2-->
-            <div class="c-content-box c-size-lg c-bg-grey-1">
-                <div class="container">
-                    <div class="">
-                        <div class="row">
-                            <div class="col-md-7">
-                                <div class="c-content-feature-5">
-                                    <div class="c-content-title-1 wow amimate fadeInDown">
-                                        <h3 class="c-left c-font-dark c-font-uppercase c-font-bold">Why
-                                            <br/>JANGO ?</h3>
-                                        <div class="c-line-left c-bg-blue-3 c-theme-bg"></div>
-                                    </div>
-                                    <div class="c-text wow animate fadeInLeft"> JANGO is the ultimate tool to power any of your projects. Corporate, ecommerce, SAAS, CRM and much more. </div>
-                                    <button type="submit" class="btn c-btn-uppercase btn-md c-btn-bold c-btn-square c-theme-btn wow animate fadeIn">Explore</button>
-                                    <img class="c-photo img-responsive wow animate fadeInUp" width="420" alt="" src="{{ asset('public/assets/base/img/content/misc/jango-intro-2.jpg')}}" /> </div>
-                            </div>
-                            <div class="col-md-5">
-                                <div class="c-content-accordion-1 c-theme wow animate fadeInRight">
-                                    <div class="panel-group" id="accordion" role="tablist">
-                                        <div class="panel">
-                                            <div class="panel-heading" role="tab" id="headingOne">
-                                                <h4 class="panel-title">
-                                                    <a class="c-font-bold c-font-uppercase c-font-19" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> Misión </a>
-                                                </h4>
-                                            </div>
-                                            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                                                <div class="panel-body c-font-18"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. </div>
-                                            </div>
-                                        </div>
-                                        <div class="panel">
-                                            <div class="panel-heading" role="tab" id="headingTwo">
-                                                <h4 class="panel-title">
-                                                    <a class="collapsed c-font-uppercase c-font-bold c-font-19" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"> Visión </a>
-                                                </h4>
-                                            </div>
-                                            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                                                <div class="panel-body c-font-18"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. </div>
-                                            </div>
-                                        </div>
-                                        <div class="panel">
-                                            <div class="panel-heading" role="tab" id="headingThree">
-                                                <h4 class="panel-title">
-                                                    <a class="collapsed c-font-uppercase c-font-bold c-font-19" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree"> Valores </a>
-                                                </h4>
-                                            </div>
-                                            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                                                <div class="panel-body c-font-18"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>   
-
-            <!--fin opcion2-->
-            
+            </div>
+     
 
         </div>
 
