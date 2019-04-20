@@ -21,10 +21,3 @@ Route::get('equipoTrabajo','NosotrosController@viewEquipoTrabajo');
 Route::resource('servicios','ServiciosController');
 
 Route::resource('contacto','ContactoController');
-
-Route::get('/modulo', function () {
-    return view('admin.modulo');
-});
-Route::get('/servicios', function () {
-    return view('admin.servicios.index');
-});
