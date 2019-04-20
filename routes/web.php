@@ -28,3 +28,6 @@ Route::get('/modulo', function () {
 Route::get('/servicios', function () {
     return view('admin.servicios.index');
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

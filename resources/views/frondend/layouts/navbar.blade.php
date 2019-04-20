@@ -14,7 +14,8 @@
                                 <a href="#" class="c-font-uppercase c-font-bold c-font-dark">Support</a>
                             </li> -->
                             <li>
-                                <a href="javascript:;" data-toggle="modal" data-target="#login-form" class="btn c-theme-btn c-btn-square c-btn-uppercase c-btn-bold">Entrar</a>
+                                <!-- <a href="javascript:;" data-toggle="modal" data-target="#login-form" class="btn c-theme-btn c-btn-square c-btn-uppercase c-btn-bold">Entrar</a> -->
+                                <a href="/login" class="btn c-theme-btn c-btn-square c-btn-uppercase c-btn-bold">Entrar</a>
                             </li>
                         </ul>
                         <ul class="c-ext hide c-theme-ul">
