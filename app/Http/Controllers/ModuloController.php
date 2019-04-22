@@ -11,9 +11,14 @@ class ModuloController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    function __construct()
+    {
+        $this->middleware(['auth' ,'roles:admin']);
+    }
     public function index()
     {
-        //
+ 
     }
 
     /**
@@ -80,5 +85,10 @@ class ModuloController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function modulo()
+    {
+        return view('admin.modulo');
     }
 }
