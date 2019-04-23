@@ -91,4 +91,5 @@ class ModuloController extends Controller
     {
         return view('admin.modulo');
     }
+  
 }

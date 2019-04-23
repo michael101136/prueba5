@@ -24,13 +24,10 @@ Route::get('contacto','PublicController@contacto')->name('contacto');
 
 //------------admin------------
 Route::get('/home', 'HomeController@index')->name('home');
-//----------fin-----------
 Route::get('/modulo','ModuloController@modulo')->name('modulo');
-Route::get('/listarServicios','ServiciosController@listarServicios')->name('listarServicios');
+Route::get('/service','ServiciosController@servicios');
+//----------fin-----------
 
-// Route::get('/servicios', function () {
-//     return view('admin.servicios.index');
-// });
 
 Auth::routes();
 
