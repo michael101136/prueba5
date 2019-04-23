@@ -4,16 +4,21 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ContactoController extends Controller
+class ModuloController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
+
+    function __construct()
+    {
+        $this->middleware(['auth' ,'roles:admin']);
+    }
     public function index()
     {
-        return view('frondend/contacto');
+ 
     }
 
     /**
@@ -80,5 +85,10 @@ class ContactoController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function modulo()
+    {
+        return view('admin.modulo');
     }
 }

@@ -223,7 +223,7 @@
                                                     <a href="{{url('nosotros')}}">Quiénes somos</a>
                                                 </li>
                                                 <li>
-                                                    <a href="{{url('equipoTrabajo')}}">Equipo de trabajo</a>
+                                                    <a href="/equipo_trabajo">Equipo de trabajo</a>
                                                 </li>
                                                
                                             </ul>
