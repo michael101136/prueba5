@@ -15,13 +15,9 @@ Route::get('/', function () {
     return view('frondend/inicio');
 });
 
-Route::resource('nosotros','NosotrosController');
-Route::get('equipoTrabajo','NosotrosController@viewEquipoTrabajo');
-
-Route::resource('serviciosfrond','ServiciosController');
 
 Route::get('nosotros','PublicController@nosotros')->name('nosotros');
-Route::get('equipo_trabajo','PublicController@viewEquipoTrabajo')->name('viewEquipoTrabajo');
+Route::get('/equipo_trabajo','PublicController@equipoTrabajo');
 Route::get('servicios','PublicController@servicios')->name('servicios');
 Route::get('contacto','PublicController@contacto')->name('contacto');
 

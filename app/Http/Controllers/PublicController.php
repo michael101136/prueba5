@@ -9,7 +9,7 @@ class PublicController extends Controller
     public function nosotros(){
         return view('frondend/nosotros');
     }
-    public function viewEquipoTrabajo()
+    public function equipoTrabajo()
     {
         return view('frondend/equipoTrabajo');
     }
