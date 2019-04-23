@@ -1,12 +1,14 @@
 <?php
 
 namespace App\Http\Controllers;
+use DB;
 use App\User;
+use App\Role;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Redirect;
-use App\Language;
-use App\Http\Requests\CreateUser;
-use App\Http\Requests\UpdateUser;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
+use App\Http\Requests\updateUserRequest;
+
 class UsersController extends Controller
 {
     /**
@@ -14,17 +16,17 @@ class UsersController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-
+    
      function __construct()
     {
-         $this->middleware(['auth' ,'roles:normal,admin']);
+         $this->middleware(['auth' ,'roles:admin,estudiante'],['except' => ['edit', 'update']]);
     }
-    
+
     public function index()
     {
-        $users = User::orderBy('id', 'desc')->simplePaginate(12);
-      
-        return view('assets.admin.usuarios.index',['users' => $users]);
+        $Users =User::all();
+        return view('Users.index' ,["Users" => $Users]);
+
     }
 
     /**
@@ -34,10 +36,10 @@ class UsersController extends Controller
      */
     public function create()
     {
-        $languages = Language::All();
-        
 
-        return view('assets.admin.usuarios.create',['languages' => $languages]);
+       $roles=Role::all();
+       return view('Users.create',['roles' => $roles ]);
+
     }
 
     /**
@@ -46,18 +48,31 @@ class UsersController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(CreateUser $request)
+    public function store(Request $request)
     {
-        
-        User::create([
-          'name'=>$request->name,
-          'email'=>$request->email,
-          'language_id'=>$request->usuarioIdioma,
-          'privilege'=>$request->privilegio,
-          'password'=>bcrypt( $request->input('password') ),
-        ]);
+         
 
-        return redirect('users');
+          
+            $user = new User;
+
+            $user->name =$request->name;
+
+            $user->email = $request->email;
+
+            $user->password = bcrypt($request->password);
+
+            $user->save();
+            
+
+
+            $userBuscar=User::find($user->id);
+
+            $userBuscar->roles()->attach($request->role);
+
+            Session::flash('success', 'Se Agrego correctamente');
+
+
+            return redirect()->route('usuarios.index');
 
     }
 
@@ -69,10 +84,7 @@ class UsersController extends Controller
      */
     public function show($id)
     {
-
-        $user = User::find($id);
-        $languages = language::All();
-        return view('assets.admin.usuarios.update',['user' => $user,'languages' => $languages]);
+        //
     }
 
     /**
@@ -83,7 +95,14 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
-        //
+        
+        $user=User::findOrFail($id);
+
+        $roles =Role::pluck('display_name', 'id');
+
+       // $this->authorize($user);//esta es de UsersPolicy
+
+        return view('Users.edit',compact('user','roles'));
     }
 
     /**
@@ -93,32 +112,17 @@ class UsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(updateUserRequest $request, $id)
     {
-        if(is_null($request->password))
-        {
-            
-            $user = User::find($id);
-            $user->name = $request->name;
-            $user->email = $request->email;
-            $user->language_id=$request->usuarioIdioma;
-            $user->privilege=$request->privilegio;
-            $user->save();
-        
-        }else 
-        {
-            $user = User::find($id);
-            $user->name = $request->name;
-            $user->email = $request->email;
-            $user->language_id=$request->usuarioIdioma;
-            $user->privilege=$request->privilegio;
-            $user->password = bcrypt( $request->input('password') );
-            $user->save();
+        //return $request->all();//saber si envia dato para actualizar
+        $user =User::findOrFail($id);
 
-        }
+        $user->update($request->all());
 
-           return redirect('users');
-       
+        $user->roles()->sync($request->roles);
+
+        //return redirect()->route('usuarios.index');
+        return back()->with('info', 'Usuario actualizado' );//envio de mensajes
     }
 
     /**
@@ -129,10 +133,39 @@ class UsersController extends Controller
      */
     public function destroy($id)
     {
-        $user = User::find($id);
+            /*$userBuscar=User::find($id);
+            $userBuscar->roles()->detach($request->role);*/
 
-        $user->delete();
-
-        return redirect()->back();
+            /*$userBuscar=User::findOrFail($id);
+            $userBuscar->delete();
+            return back();*/
+            $usuario=DB::table('assigned_roles')->where('id', $id);
+            count($usuario);
+           
+        
     }
+
+ 
+    public function listarEliminarUsuarios($id)
+    {
+        
+        $user=User::find($id);
+       //dd($user->roles->toArray());
+       /* $data = [];
+        $data['user'] = $user->roles;*/
+
+     // dd($user->roles->toArray());
+
+        return view('Users.eliminar',['user' => $user->roles]);
+    }
+
+    public function eliminar($id_usuario,$id_rol)
+    {
+        
+        $User= User::find($id_usuario);
+        $User->roles()->detach($id_rol);
+
+        return redirect()->route('usuarios.index');
+    }
+
 }
