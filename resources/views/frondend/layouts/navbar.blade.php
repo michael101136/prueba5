@@ -225,6 +225,9 @@
                                                 <li>
                                                     <a href="/equipo_trabajo">Equipo de trabajo</a>
                                                 </li>
+                                                <li>
+                                                    <a href="/organigrama">Organigrama</a>
+                                                </li>
                                                
                                             </ul>
                                 </li>

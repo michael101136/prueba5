@@ -13,6 +13,10 @@ class PublicController extends Controller
     {
         return view('frondend/equipoTrabajo');
     }
+    public function organigrama()
+    {
+        return view('frondend/organigrama');
+    }
     public function servicios()
     {
         return view('frondend/servicios');
