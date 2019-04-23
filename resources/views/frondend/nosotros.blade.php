@@ -266,8 +266,8 @@
                             <div class="col-md-7">
                                 <div class="c-content-feature-5">
                                     <div class="c-content-title-1 wow amimate fadeInDown">
-                                        <h3 class="c-left c-font-dark c-font-uppercase c-font-bold">Why
-                                            <br/>JANGO ?</h3>
+                                        <h3 class="c-left c-font-dark c-font-uppercase c-font-bold">QUIÉNES 
+                                            <br/>SOMOS?</h3>
                                         <div class="c-line-left c-bg-blue-3 c-theme-bg"></div>
                                     </div>
                                     <div class="c-text wow animate fadeInLeft"> JANGO is the ultimate tool to power any of your projects. Corporate, ecommerce, SAAS, CRM and much more. </div>
@@ -284,7 +284,7 @@
                                                 </h4>
                                             </div>
                                             <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                                                <div class="panel-body c-font-18"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. </div>
+                                                <div class="panel-body c-font-18"> Somos una empresa que ofrece oportunidades de desarrollo profesional y humano a sus colaboradores, buscando el perfeccionamiento de sus capacidades y su bienestar permanente, el resultado de la formación y consolidación de este grupo humano son los servicios de alta calidad caracterizados por la gran responsabilidad social, medio ambiente, gestión, administración, salud y seguridad a nuestros clientes, mediante un soporte profesional con excelencia, ética, innovación, creatividad y de alta calidad, para el desarrollo sostenible de nuestro país en el ámbito de la construcción y el ambiente </div>
                                             </div>
                                         </div>
                                         <div class="panel">
@@ -294,17 +294,19 @@
                                                 </h4>
                                             </div>
                                             <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                                                <div class="panel-body c-font-18"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. </div>
+                                                <div class="panel-body c-font-18"> Consolidarnos como la empresa líder en servicios de planeación, elaboración y ejecución como consultoría, ingeniería, construcción, asesoría, abastecimiento, compra y venta, producción y afines de proyectos, expedientes técnicos, requerimientos y ejecución en obras de mayor y menor envergadura a nivel público y privado.  A nivel nacional e internacional, brindando servicios de excelencia con el mejor equipo humano y tecnología de vanguardia. Proporcionamos a nuestros clientes la satisfacción de sus requerimientos a través de la correcta aplicación de la información procesada y de herramientas tecnológicas que les permita aumentar su competitividad y rentabilidad. Gracias a una adecuada toma de decisiones. </div>
                                             </div>
                                         </div>
                                         <div class="panel">
                                             <div class="panel-heading" role="tab" id="headingThree">
                                                 <h4 class="panel-title">
-                                                    <a class="collapsed c-font-uppercase c-font-bold c-font-19" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree"> Valores </a>
+                                                    <a class="collapsed c-font-uppercase c-font-bold c-font-19" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree"> Quiénes somos? </a>
                                                 </h4>
                                             </div>
                                             <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                                                <div class="panel-body c-font-18"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. </div>
+                                                <div class="panel-body c-font-18"> Somos una empresa que ofrece oportunidades de desarrollo profesional y humano a sus colaboradores. Bridamos servicios de alta calidad caracterizados por la  gran responsabilidad ambiental, social y seguridad a nuestros clientes, mediante un soporte profesional con excelencia, ética, innovación, creatividad y alta calidad.
+Prestamos servicios de asesoría, consultorías y ejecución de monitoreo ambientales dirigidos a apoyar la gestión del ambiente mediante el análisis y comprensión de fenómenos ecológicos, ambientales y sus manifestaciones.
+ </div>
                                             </div>
                                         </div>
                                     </div>
