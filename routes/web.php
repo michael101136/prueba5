@@ -27,6 +27,7 @@ Route::get('contacto','PublicController@contacto')->name('contacto');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/modulo','ModuloController@modulo')->name('modulo');
 Route::get('/service','ServiciosController@servicios');
+Route::resource('/services','ServiciosController');
 //----------fin-----------
 
 

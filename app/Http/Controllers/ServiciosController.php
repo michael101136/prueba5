@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use DB;
+use App\Categoria;
+use App\CategoriaUser;
 class ServiciosController extends Controller
 {
     /**
@@ -13,7 +15,7 @@ class ServiciosController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.servicios.index');
     }
 
     /**
@@ -23,7 +25,8 @@ class ServiciosController extends Controller
      */
     public function create()
     {
-        //
+        $tipoServicio=Categoria::all();
+        return view('admin.servicios.create',['tipoServicio'=>$tipoServicio]);
     }
 
     /**
@@ -34,9 +37,14 @@ class ServiciosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data=new CategoriaUser();
+        $data->titulo=$request->titulo;
+        $data->contenido=$request->contenido;
+        $data->user_id='1';
+        $data->categoria_id=$request->tiposervicio;
+        $data->save();
+        return redirect()->route('services.index');
     }
-
     /**
      * Display the specified resource.
      *
@@ -83,6 +91,6 @@ class ServiciosController extends Controller
     }
     public function servicios()
     {
-        return view('admin.layout.from');
+        return view('admin.servicios.index');
     }
 }
