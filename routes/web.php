@@ -28,6 +28,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/modulo','ModuloController@modulo')->name('modulo');
 Route::get('/service','ServiciosController@servicios');
 Route::resource('/services','ServiciosController');
+Route::Resource('/usuarios' , 'UsersController');
 //----------fin-----------
 
 

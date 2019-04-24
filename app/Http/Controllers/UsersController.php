@@ -17,15 +17,16 @@ class UsersController extends Controller
      * @return \Illuminate\Http\Response
      */
     
-     function __construct()
-    {
-         $this->middleware(['auth' ,'roles:admin,estudiante'],['except' => ['edit', 'update']]);
-    }
+    //  function __construct()
+    // {
+    //      $this->middleware(['auth' ,'roles:admin,estudiante'],['except' => ['edit', 'update']]);
+    // }
 
     public function index()
     {
+       
         $Users =User::all();
-        return view('Users.index' ,["Users" => $Users]);
+        return view('admin.usuarios.index' ,["Users" => $Users]);
 
     }
 
