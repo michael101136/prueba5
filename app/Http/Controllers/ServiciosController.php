@@ -15,7 +15,12 @@ class ServiciosController extends Controller
      */
     public function index()
     {
-        return view('admin.servicios.index');
+        $data=db::table('categorias')
+        ->select('categorias.nombre','categoria_users.titulo')
+        ->join('categoria_users','categoria_users.categoria_id','=','categorias.id')
+        ->get();
+     
+        return view('admin.servicios.index',['data'=>$data]);
     }
 
     /**
