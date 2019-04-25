@@ -15,12 +15,9 @@ class ServiciosController extends Controller
      */
     public function index()
     {
-        $data=db::table('categorias')
-        ->select('categorias.nombre','categoria_users.titulo')
-        ->join('categoria_users','categoria_users.categoria_id','=','categorias.id')
-        ->get();
-     
-        return view('admin.servicios.index',['data'=>$data]);
+       
+       
+
     }
 
     /**
@@ -96,6 +93,29 @@ class ServiciosController extends Controller
     }
     public function servicios()
     {
-        return view('admin.servicios.index');
+        $data=db::table('categorias')
+        ->select('categorias.nombre','categoria_users.titulo','categoria_users.id as idcategoriauser')
+        ->join('categoria_users','categoria_users.categoria_id','=','categorias.id')
+        ->get();
+        // dd($data);
+        return view('admin.servicios.index',['data'=>$data]);
+    }
+    public function servicetype()
+    {
+        $data=Categoria::all();
+
+        return view('admin.servicios.tipoServicio',['data'=>$data]);
+    }
+    public function servicetypecreate(){
+
+        return view('admin.servicios.tipoServicioCreate');
+    }
+    public function servicetypeinsert(Request $request)
+    {
+        $data=new Categoria();
+        $data->nombre=$request->nombre;
+        $data->descripcion=$request->descripcion;
+        $data->save();
+        return redirect()->route('services.index');
     }
 }

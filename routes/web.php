@@ -27,6 +27,12 @@ Route::get('contacto','PublicController@contacto')->name('contacto');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/modulo','ModuloController@modulo')->name('modulo');
 Route::get('/service','ServiciosController@servicios');
+Route::get('/servicetype','ServiciosController@servicetype');
+Route::get('/servicetypecreate','ServiciosController@servicetypecreate');
+Route:: POST('/servicetypeinsert', [
+    'uses' => 'ServiciosController@servicetypeinsert',
+    'as' => 'servicetypeinsertPost'
+]);
 Route::resource('/services','ServiciosController');
 Route::Resource('/usuarios' , 'UsersController');
 //----------fin-----------

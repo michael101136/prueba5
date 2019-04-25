@@ -3,7 +3,7 @@
 
 <div class="app-title">
         <div>
-          <h1><i class="fa fa-th-list"></i> Servicios</h1>
+          <h1><i class="fa fa-th-list"></i> TIPO DE SERVICIOS</h1>
           <!-- <p>Table to display analytical data effectively</p> -->
         </div>
    
@@ -13,7 +13,8 @@
         <div class="col-md-12">
             
           <div class="tile">
-          <a href="{{('/services/create')}}" class="btn btn-primary">Nuevo </a><hr/>
+          
+          <a href="{{('/servicetypecreate')}}" class="btn btn-primary">Nuevo </a><hr/>
             <div class="tile-body">
                 
               <table class="table table-hover table-bordered" id="sampleTable">
@@ -21,19 +22,18 @@
                   <tr>
                     <th>#</th>
                     <th>Tipo de servicio</th>
-                    <th>Categoria</th>
+                    <th>Descripción</th>
 
                     <th></th>
                   </tr>
                 </thead>
-                <tbody>
-                  
+                <tbody> 
                   @foreach($data as $item)
-
                   <tr>
-                    <td>{{$item->idcategoriauser}}</td>
+                    <td></td>
                     <td>{{$item->nombre}}</td>
-                    <td>{{$item->titulo}}</td>
+                    <td>{{$item->descripcion}}</td>
+
                     <td>
                       <div class="btn-group"><a class="btn btn-primary" href="#"><i class="fa fa-lg fa-plus"></i></a><a class="btn btn-primary" href="#"><i class="fa fa-lg fa-edit"></i></a><a class="btn btn-primary" href="#"><i class="fa fa-lg fa-trash"></i></a></div>
                     </td>
