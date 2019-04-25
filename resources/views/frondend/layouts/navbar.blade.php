@@ -100,7 +100,7 @@
                         <nav class="c-mega-menu c-pull-right c-mega-menu-dark c-mega-menu-dark-mobile c-fonts-uppercase c-fonts-bold">
                             <ul class="nav navbar-nav c-theme-nav">
                                 <li class="c-active">
-                                    <a href="javascript:;" class="c-link dropdown-toggle">Inicio
+                                    <a href="/inicio" class="c-link dropdown-toggle">Inicio
                                         <span class="c-arrow c-toggler"></span>
                                     </a>
                                     <div class="dropdown-menu c-menu-type-mega c-menu-type-fullwidth" style="min-width: auto">
@@ -236,40 +236,13 @@
                                         <span class="c-arrow c-toggler"></span>
                                     </a>
                                     <ul class="dropdown-menu c-menu-type-classic c-pull-left">
+                                        @foreach ($data as $item)
                                         <li class="dropdown-submenu">
-                                            <a href="{{url('servicios')}}">Consultoria ambiental
+                                            <a href="/servicios/{{$item->nombre}}">{{$item->nombre}}
                                                 <span class="c-arrow c-toggler"></span>
                                             </a>
-                                            <!-- <ul class="dropdown-menu c-pull-right">
-                                                <li>
-                                                    <a href="home-header-1.html">Home Header v1</a>
-                                                </li>
-                                            
-                                            </ul> -->
                                         </li>
-                                        <li class="dropdown-submenu">
-                                            <a href="#">Formulación de proyectos
-                                                <span class="c-arrow c-toggler"></span>
-                                            </a>
-                                            <!-- <ul class="dropdown-menu c-pull-right">
-                                                <li>
-                                                    <a href="sidebar-menu-1.html">Sidebar Menu v1</a>
-                                                </li>
-                                                <li>
-                                                    <a href="sidebar-menu-2.html">Sidebar Menu v2</a>
-                                                </li>
-                                                <li>
-                                                    <a href="sidebar-menu-static.html">Expanded Static Sidebar Menu</a>
-                                                </li>
-                                                <li>
-                                                    <a href="sidebar-menu-right.html">Right Sidebar Menu</a>
-                                                </li>
-                                                <li>
-                                                    <a href="sidebar-menu-fluid.html">Sidebar Menu In Fluid Layout</a>
-                                                </li>
-                                            </ul> -->
-                                        </li>
-
+                                        @endforeach
                                     </ul>
                                 </li>
                                 <li class="c-menu-type-classic">

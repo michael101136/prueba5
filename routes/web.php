@@ -11,15 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('frondend/inicio');
-});
-
-
+Route::get('/','PublicController@principal')->name('inicio');
+Route::get('/inicio','PublicController@principal')->name('inicio');
 Route::get('nosotros','PublicController@nosotros')->name('nosotros');
 Route::get('/equipo_trabajo','PublicController@equipoTrabajo');
 Route::get('/organigrama','PublicController@organigrama');
-Route::get('servicios','PublicController@servicios')->name('servicios');
+Route::get('servicios/{servicio?}','PublicController@servicios')->name('servicios');
 Route::get('contacto','PublicController@contacto')->name('contacto');
 
 
