@@ -127,7 +127,7 @@ class ServiciosController extends Controller
         $data->nombre=$request->nombre;
         $data->descripcion=$request->descripcion;
         $data->save();
-        return redirect()->route('services.index');
+        return redirect('/servicetype');
     }
 
     public function updateServicios(Request $request)
