@@ -39,13 +39,15 @@ class ServiciosController extends Controller
      */
     public function store(Request $request)
     {
+    
         $data=new CategoriaUser();
         $data->titulo=$request->titulo;
         $data->contenido=$request->contenido;
         $data->user_id='1';
         $data->categoria_id=$request->tiposervicio;
         $data->save();
-        return redirect()->route('services.index');
+        
+        return redirect('/service');
     }
     /**
      * Display the specified resource.
@@ -66,7 +68,12 @@ class ServiciosController extends Controller
      */
     public function edit($id)
     {
-        //
+        // $data= CategoriaUser::find($id);
+        $data=db::table('categoria_users')
+        ->select ('*')
+        ->get()[0];
+
+        return  view('admin.servicios.update',['data'=>$data]);
     }
 
     /**

@@ -5,7 +5,7 @@
 
 <div class="app-title">
         <div>
-          <h1><i class="fa fa-dashboard"></i> Crear servicios</h1>
+          <h1><i class="fa fa-dashboard"></i> Actualizar servicios</h1>
 
         </div>
        
@@ -15,24 +15,24 @@
           <div class="tile">
             <div class="tile-body">
 
-              {!! Form::open(['route' => ['services.store'] , 'method' => 'POST', 'class' => 'form-horizontal','enctype' => 'multipart/form-data' ]) !!}
+              {!! Form::open(['route' => ['services.update',$data->id] , 'method' => 'POST', 'class' => 'form-horizontal','enctype' => 'multipart/form-data' ]) !!}
 
                  <div class="form-group">
                     <label for="exampleInputEmail1">Tipo servicio</label>
                     <select class="form-control" id="tiposervicio" name="tiposervicio">
-                        @foreach($tipoServicio as $item)
-                        <option value="{{$item->id}}">{{$item->nombre}}</option>
-                        @endforeach
+
+                        <option value=""></option>
+                     
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Titulo</label>
-                    <input type="text" id="titulo" name="titulo" class="form-control"  placeholder="Enter email">
+                    <input type="text" id="titulo" name="titulo" value="{{$data->titulo}}" class="form-control"  placeholder="Enter email">
                    
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">Contenido</label>
-                    <textarea id="contenido" name="contenido"></textarea>
+                    <textarea id="contenido" name="contenido" value="{{$data->contenido}}">{{$data->contenido}}</textarea>
                 </div>
                 
                
@@ -48,11 +48,12 @@
 <script>
     $(document).ready(function() {
         $('#contenido').summernote({
-          height: 350,                 // set editor height
+            height: 350,                 // set editor height
       minHeight: null,             // set minimum height of editor
       maxHeight: null,             // set maximum height of editor
       focus: false
         });
+        
     });
   </script>
 @endsection

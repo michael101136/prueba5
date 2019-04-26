@@ -35,7 +35,7 @@
                     <td>{{$item->nombre}}</td>
                     <td>{{$item->titulo}}</td>
                     <td>
-                      <div class="btn-group"><a class="btn btn-primary" href="#"><i class="fa fa-lg fa-plus"></i></a><a class="btn btn-primary" href="#"><i class="fa fa-lg fa-edit"></i></a><a class="btn btn-primary" href="#"><i class="fa fa-lg fa-trash"></i></a></div>
+                      <div class="btn-group"><a class="btn btn-primary" href="#"><i class="fa fa-lg fa-plus"></i></a><a class="btn btn-primary" href="{{route('services.edit',$item->idcategoriauser)}}"><i class="fa fa-lg fa-edit"></i></a><a class="btn btn-primary" href="#"><i class="fa fa-lg fa-trash"></i></a></div>
                     </td>
                   </tr>
                 @endforeach
