@@ -15,24 +15,26 @@
           <div class="tile">
             <div class="tile-body">
 
-              {!! Form::open(['route' => ['services.update',$data->id] , 'method' => 'POST', 'class' => 'form-horizontal','enctype' => 'multipart/form-data' ]) !!}
+              {!! Form::open(['route' => ['updateServicios'] , 'method' => 'POST', 'class' => 'form-horizontal','enctype' => 'multipart/form-data' ]) !!}
 
                  <div class="form-group">
                     <label for="exampleInputEmail1">Tipo servicio</label>
                     <select class="form-control" id="tiposervicio" name="tiposervicio">
-
-                        <option value=""></option>
+                        @foreach($servicio as $item)
+                         <option value="{{ $item->id}}"> {{ $item->nombre}}</option>
+                        @endforeach
                      
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Titulo</label>
+                    <input type="hidden" id="id" name="id" value="{{$data->id}}" class="form-control"  placeholder="Enter email">
                     <input type="text" id="titulo" name="titulo" value="{{$data->titulo}}" class="form-control"  placeholder="Enter email">
                    
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">Contenido</label>
-                    <textarea id="contenido" name="contenido" value="{{$data->contenido}}">{{$data->contenido}}</textarea>
+                    <textarea id="contenido" name="contenido" >{{$data->contenido}}</textarea>
                 </div>
                 
                
@@ -49,9 +51,9 @@
     $(document).ready(function() {
         $('#contenido').summernote({
             height: 350,                 // set editor height
-      minHeight: null,             // set minimum height of editor
-      maxHeight: null,             // set maximum height of editor
-      focus: false
+            minHeight: null,             // set minimum height of editor
+            maxHeight: null,             // set maximum height of editor
+            focus: false
         });
         
     });

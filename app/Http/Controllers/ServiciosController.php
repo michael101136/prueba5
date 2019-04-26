@@ -71,9 +71,13 @@ class ServiciosController extends Controller
         // $data= CategoriaUser::find($id);
         $data=db::table('categoria_users')
         ->select ('*')
+        ->where('id','=',$id)
         ->get()[0];
 
-        return  view('admin.servicios.update',['data'=>$data]);
+        $servicio=Categoria::all();
+
+
+        return  view('admin.servicios.update',['data'=>$data,'servicio'=>$servicio]);
     }
 
     /**
@@ -125,4 +129,18 @@ class ServiciosController extends Controller
         $data->save();
         return redirect()->route('services.index');
     }
+
+    public function updateServicios(Request $request)
+    {
+
+
+
+        $data = CategoriaUser::find($request->id);
+        $data->titulo=$request->titulo;
+        $data->contenido=$request->contenido;
+        $data->categoria_id=$request->tiposervicio;
+        $data->save();
+
+         return redirect('/service');
+    } 
 }

@@ -30,6 +30,10 @@ Route:: POST('/servicetypeinsert', [
     'uses' => 'ServiciosController@servicetypeinsert',
     'as' => 'servicetypeinsertPost'
 ]);
+Route:: POST('/servicess', [
+    'uses' => 'ServiciosController@updateServicios',
+    'as' => 'updateServicios'
+]);
 Route::resource('/services','ServiciosController');
 Route::Resource('/usuarios' , 'UsersController');
 //----------fin-----------

@@ -18,10 +18,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Main CSS-->
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-bs4.css" rel="stylesheet">
     <link rel="stylesheet" href=" {{ URL::asset('/public/template/css/main.css')}}">
     <!-- Font-icon css-->
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote.css" rel="stylesheet">
+ 
   </head>
   <body class="app sidebar-mini rtl">
     <!-- Navbar-->
@@ -114,7 +115,7 @@
     <script src="{{ URL::asset('/public/template/js/plugins/pace.min.js')}}"></script>
     <script type="text/javascript" src="{{ URL::asset('/public/template/js/plugins/jquery.dataTables.min.js')}}"></script>
     <script type="text/javascript" src="{{ URL::asset('/public/template/js/plugins/dataTables.bootstrap.min.js')}}"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-bs4.js"></script>
     @yield('script')
     
   
